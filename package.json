@@ -29,5 +29,8 @@
     "name": "Midka",
     "email": "me@midka.dev",
     "url": "https://github.com/kymppi"
+  },
+  "bugs": {
+    "url": "https://github.com/BudjetGenix/mobile/issues"
   }
 }
