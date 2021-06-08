@@ -1,4 +1,6 @@
 {
+  "name": "budjetgenix-mobile",
+  "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -21,5 +23,11 @@
     "@types/react-native": "~0.63.2",
     "typescript": "~4.0.0"
   },
-  "private": true
+  "private": false,
+  "license": "MIT",
+  "author": {
+    "name": "Midka",
+    "email": "me@midka.dev",
+    "url": "https://github.com/kymppi"
+  }
 }
