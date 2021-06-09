@@ -1,10 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC } from 'react';
 import { Text as RNText } from 'react-native';
 
 import defaultStyles from '@config/defaultStyles';
 
 type TextProps = {
-  style?: object;
+  style?: {
+    [key: string]: any;
+  };
   [key: string]: any;
 };
 

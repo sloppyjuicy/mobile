@@ -15,9 +15,11 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
+  "ignorePatterns": ["**/config/*.js"],
   "rules": {
     "import/no-unresolved": 0,
-    "no-empty-interface": false,
+    "@typescript-eslint/no-empty-interface": 0,
+    "no-empty-interface": 0,
     "react/jsx-filename-extension": [
       1,
       {
@@ -37,6 +39,7 @@
     "import/extensions": ["error", "never"],
     "react/prop-types": 0,
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": ["error"]
+    "@typescript-eslint/no-shadow": ["error"],
+    "react/jsx-props-no-spreading": 0
   }
 }

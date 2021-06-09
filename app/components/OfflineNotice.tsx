@@ -8,7 +8,7 @@ import Text from './Text';
 
 interface OfflineNoticeProps {}
 
-const OfflineNotice: FC<OfflineNoticeProps> = ({}) => {
+const OfflineNotice: FC<OfflineNoticeProps> = () => {
   const netInfo = useNetInfo();
 
   if (netInfo.type !== 'unknown' && netInfo.isInternetReachable === false)
