@@ -8,10 +8,10 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest --watch --coverage=false --changedSince=origin/master",
-    "testDebug": "jest -o --watch --coverage=false",
-    "testFinal": "jest",
-    "updateSnapshots": "jest -u --coverage=false"
+    "test": "jest",
+    "test:watch": "npm run test --watch",
+    "test:ci": "npm run test --coverage",
+    "test:badges": "npm run test:ci  && jest-coverage-badges --input coverage/coverage-summary.json --output __badges__"
   },
   "dependencies": {
     "expo": "~41.0.1",
@@ -23,8 +23,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/jest": "^26.0.23",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
+    "@types/react-test-renderer": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
     "eslint": "7.2.0",
@@ -35,9 +38,12 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "1.7.0",
+    "jest": "^27.0.4",
+    "jest-coverage-badges": "^1.1.2",
     "jest-expo": "^41.0.0",
     "prettier": "^2.3.1",
     "react-test-renderer": "^17.0.2",
+    "ts-jest": "^27.0.3",
     "typescript": "~4.0.0"
   },
   "private": false,
@@ -62,6 +68,14 @@
     "preset": "jest-expo",
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/coverage/**",
+      "!**/node_modules/**",
+      "!**/babel.config.js",
+      "!**/jest.setup.js"
     ]
   }
 }
