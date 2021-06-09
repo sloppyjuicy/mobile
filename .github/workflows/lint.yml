@@ -23,6 +23,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install -g yarn
-    - run: yarn global add eslint
+    - run: yarn add eslint
     - run: rm -rf node_modules && yarn install --frozen-lockfile
     - run: eslint .
