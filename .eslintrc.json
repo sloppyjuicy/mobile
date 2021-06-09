@@ -15,7 +15,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "ignorePatterns": ["**/config/*.js"],
+  "ignorePatterns": ["babel.config.js"],
   "rules": {
     "import/no-unresolved": 0,
     "@typescript-eslint/no-empty-interface": 0,
