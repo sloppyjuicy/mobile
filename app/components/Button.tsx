@@ -1,18 +1,46 @@
 import React, { FC } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import {
+  GestureResponderEvent,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 
-interface ButtonProps {}
+import colors from '@config/colors';
 
-const Button: FC<ButtonProps> = ({}) => {
+type ButtonProps = {
+  title: string;
+  onPress: (event: GestureResponderEvent) => void;
+  color: string;
+};
+
+const Button: FC<ButtonProps> = ({ onPress, color, title }) => {
   return (
-    <View style={styles.container}>
-      <Text>Hello</Text>
-    </View>
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.button, { backgroundColor: color }]}
+    >
+      <Text style={styles.text}>{title}</Text>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {},
+  button: {
+    backgroundColor: colors.primary,
+    borderRadius: 25,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 15,
+    width: '100%',
+    marginVertical: 10,
+  },
+  text: {
+    color: colors.white,
+    fontSize: 18,
+    textTransform: 'uppercase',
+    fontWeight: 'bold',
+  },
 });
 
 export default Button;
