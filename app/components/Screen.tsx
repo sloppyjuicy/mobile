@@ -1,9 +1,12 @@
 import React, { FC } from 'react';
-import { SafeAreaView, StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 
 type ScreenProps = {
-  style?: object;
+  style?: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any;
+  };
 };
 
 const Screen: FC<ScreenProps> = ({ children, style }) => {

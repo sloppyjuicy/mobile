@@ -10,11 +10,15 @@ import colors from '@config/colors';
 
 type ButtonProps = {
   title: string;
-  onPress: (event: GestureResponderEvent) => void;
-  color: string;
+  onPress?: (event: GestureResponderEvent) => void;
+  color?: string;
 };
 
-const Button: FC<ButtonProps> = ({ onPress, color, title }) => {
+const Button: FC<ButtonProps> = ({
+  onPress,
+  color = colors.primary,
+  title,
+}) => {
   return (
     <TouchableOpacity
       onPress={onPress}

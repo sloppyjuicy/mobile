@@ -14,7 +14,7 @@ exports[`<Button /> renders properly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": undefined,
+      "backgroundColor": "#fc5c65",
       "borderRadius": 25,
       "justifyContent": "center",
       "marginVertical": 10,

@@ -3,8 +3,8 @@ import { View, StyleSheet, Platform } from 'react-native';
 import Constants from 'expo-constants';
 import { useNetInfo } from '@react-native-community/netinfo';
 
-import Text from './Text';
 import colors from '@config/colors';
+import Text from './Text';
 
 interface OfflineNoticeProps {}
 
