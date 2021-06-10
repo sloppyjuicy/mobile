@@ -40,6 +40,7 @@
     "react/prop-types": 0,
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
-    "react/jsx-props-no-spreading": 0
+    "react/jsx-props-no-spreading": 0,
+    "camelcase": "off"
   }
 }
