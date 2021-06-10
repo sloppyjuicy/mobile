@@ -6,9 +6,9 @@ import defaultStyles from '@config/defaultStyles';
 
 type TextProps = {
   style?: {
-    [key: string]: any;
+    [style: string]: any;
   };
-  [key: string]: any;
+  [prop: string]: any;
 };
 
 const Text: FC<TextProps> = ({ children, style, ...rest }) => {
