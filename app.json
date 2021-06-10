@@ -2,6 +2,7 @@
   "expo": {
     "name": "budjetgenix",
     "slug": "budjetgenix",
+    "scheme": "bdgx",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",

@@ -5,10 +5,12 @@ import { View, StyleSheet, ImageBackground, Image } from 'react-native';
 import Text from '@components/Text';
 import Button from '@components/Button';
 import colors from '@config/colors';
+import { useAuth } from '@auth/context';
 
 interface WelcomeScreenProps {}
 
 const WelcomeScreen: FC<WelcomeScreenProps> = () => {
+  const { login, user } = useAuth();
   return (
     <ImageBackground
       blurRadius={5}
@@ -16,15 +18,14 @@ const WelcomeScreen: FC<WelcomeScreenProps> = () => {
       source={require('@assets/background.jpg')}
     >
       <View style={styles.logoContainer}>
-        <Image source={require('@assets/icon.png')} style={styles.logo} />
-        <Text style={styles.tagLine}>Tag Line</Text>
+        <Image
+          source={user ? { uri: user.picture } : require('@assets/icon.png')}
+          style={styles.logo}
+        />
+        <Text style={styles.tagLine}>{user ? user.name : 'Tag Line'}</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <Button
-          title="Login"
-          color={colors.primary}
-          onPress={() => console.log('Login')}
-        />
+        <Button title="Login" color={colors.primary} onPress={login} />
         <Button
           title="Register"
           color={colors.secondary}
